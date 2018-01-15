@@ -1,6 +1,6 @@
 {
   "name": "reblocks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "keywords": [],
   "main": "dist/reblocks.umd.js",
@@ -24,12 +24,13 @@
     "prebuild": "yarn run clean",
     "precommit": "lint-staged",
     "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
-    "tsc": "NODE_ENV=production tsc",
+    "release": "semantic-release pre && yarn publish && semantic-release post",
     "start": "tsc && webpack",
     "storybook": "start-storybook -p 6006",
     "test": "jest",
     "test:prod": "jest --coverage --no-cache",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "tsc": "NODE_ENV=production tsc"
   },
   "jest": {
     "moduleNameMapper": {
@@ -104,6 +105,7 @@
     "rebass": "^1.0.4",
     "replace-in-file": "^3.0.0-beta.2",
     "rimraf": "^2.6.1",
+    "semantic-release": "^12.2.2",
     "source-map-explorer": "^1.5.0",
     "storybook-readme": "^3.1.1",
     "ts-jest": "^21.0.0",
