@@ -19,7 +19,8 @@
   "scripts": {
     "build": "NODE_ENV=production tsc && webpack",
     "build:docs": "npm run build && typedoc --out dist/docs --target es6 --theme minimal src",
-    "build:storybook": "rimraf docs && build-storybook && mv storybook-static docs",
+    "build:storybook":
+      "NODE_DEBUG=gh-pages rimraf storybook-static && build-storybook && gh-pages -d storybook-static && rimraf storybook-static",
     "clean": "rimraf dist storybook-static",
     "prebuild": "yarn run clean",
     "precommit": "lint-staged",
@@ -56,6 +57,7 @@
   "dependencies": {
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.6",
+    "gh-pages": "^1.1.0",
     "prettier-eslint-cli": "^4.7.0",
     "react-dom": "^15.5.0",
     "react-dom-factories": "^1.0.2",
