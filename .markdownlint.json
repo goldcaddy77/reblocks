@@ -1,0 +1,12 @@
+{
+  "MD009": {
+    "br_spaces": 2
+  },
+  "MD013": {
+    "line_length": 120,
+    "code_blocks": false
+  },
+  "MD029": {
+    "style": "ordered"
+  }
+}

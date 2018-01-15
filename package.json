@@ -1,0 +1,137 @@
+{
+  "name": "reblocks",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "main": "dist/reblocks.umd.js",
+  "module": "dist/reblocks.es5.js",
+  "typings": "dist/types/reblocks.d.ts",
+  "files": ["dist"],
+  "author": "Dan Caddigan <goldcaddy77@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production tsc && webpack && ./tools/build/addCustomTypings.sh",
+    "build:docs": "npm run build && typedoc --out dist/docs --target es6 --theme minimal src",
+    "build:storybook": "build-storybook",
+    "clean": "rimraf dist storybook-static",
+    "prebuild": "yarn run clean",
+    "precommit": "lint-staged",
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "tsc": "NODE_ENV=production tsc",
+    "start": "tsc && webpack",
+    "storybook": "start-storybook -p 6006",
+    "test": "jest",
+    "test:prod": "jest --coverage --no-cache",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "coveragePathIgnorePatterns": ["/node_modules/", "/test/"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 40,
+        "functions": 40,
+        "lines": 65,
+        "statements": 65
+      }
+    },
+    "collectCoverage": true,
+    "mapCoverage": true
+  },
+  "dependencies": {
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.6",
+    "prettier-eslint-cli": "^4.7.0",
+    "react-dom": "^15.5.0",
+    "react-dom-factories": "^1.0.2",
+    "react-transition-group": "^1.2.1",
+    "style-loader": "^0.19.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.14",
+    "@storybook/addon-graphql": "^3.2.14",
+    "@storybook/addon-knobs": "^3.2.14",
+    "@storybook/addon-links": "^3.2.14",
+    "@storybook/addon-options": "^3.2.15",
+    "@storybook/react": "^3.2.14",
+    "@types/enzyme": "2.8.4",
+    "@types/enzyme-to-json": "^1.5.0",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.47",
+    "@types/prop-types": "^15.5.2",
+    "@types/react": "^15.6.6",
+    "@types/react-icons": "^2.2.4",
+    "@types/react-test-renderer": "^16.0.0",
+    "@types/rebass": "^0.2.18",
+    "@types/storybook__addon-actions": "^3.0.1",
+    "@types/storybook__addon-knobs": "^3.2.1",
+    "@types/storybook__addon-links": "^3.0.2",
+    "@types/storybook__addon-options": "^3.2.0",
+    "@types/storybook__react": "^3.0.5",
+    "awesome-typescript-loader": "^3.3.0",
+    "colors": "^1.1.2",
+    "cross-env": "^5.0.1",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^2.0.1",
+    "husky": "^0.14.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^21.0.0",
+    "jest-cli": "^21.2.1",
+    "lint-staged": "^6.0.0",
+    "markdownlint-cli": "^0.5.0",
+    "prettier": "^1.9.2",
+    "prompt": "^1.0.0",
+    "prop-types": "^15.6.0",
+    "raw-loader": "^0.5.1",
+    "react": "^15.5.0",
+    "react-dom": "^15.5.0",
+    "react-icons": "^2.2.7",
+    "react-test-renderer": "^15.5.0",
+    "rebass": "^1.0.4",
+    "replace-in-file": "^3.0.0-beta.2",
+    "rimraf": "^2.6.1",
+    "source-map-explorer": "^1.5.0",
+    "storybook-readme": "^3.1.1",
+    "ts-jest": "^21.0.0",
+    "ts-loader": "^3.1.1",
+    "ts-node": "^3.0.6",
+    "tslint": "^5.4.3",
+    "tslint-config-prettier": "^1.1.0",
+    "tslint-react": "^3.2.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.3.4",
+    "typescript-eslint-parser": "^10.0.0",
+    "webpack": "^3.8.1"
+  },
+  "release": {
+    "branch": "master"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "tslint -t codeFrame || exit 1",
+      "prettier --parser typescript --write",
+      "git add"
+    ],
+    "*.{js,jsx}": ["prettier-eslint --write", "git add"],
+    "*.{css,json}": ["prettier --write", "git add"],
+    "*.md": ["markdownlint"]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
+  }
+}
