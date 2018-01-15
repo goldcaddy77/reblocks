@@ -10,7 +10,7 @@
   "author": "Dan Caddigan <goldcaddy77@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/goldcaddy77/reblocks.git"
   },
   "license": "MIT",
   "engines": {
