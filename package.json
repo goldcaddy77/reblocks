@@ -19,7 +19,7 @@
   "scripts": {
     "build": "NODE_ENV=production tsc && webpack",
     "build:docs": "npm run build && typedoc --out dist/docs --target es6 --theme minimal src",
-    "build:storybook": "build-storybook",
+    "build:storybook": "rimraf docs && build-storybook && mv storybook-static docs",
     "clean": "rimraf dist storybook-static",
     "prebuild": "yarn run clean",
     "precommit": "lint-staged",

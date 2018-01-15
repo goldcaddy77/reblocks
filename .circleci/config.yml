@@ -21,4 +21,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: yarn build
+      - run: yarn run build:storybook
       - run: yarn run semantic-release
