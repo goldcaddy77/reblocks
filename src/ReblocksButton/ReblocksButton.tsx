@@ -14,7 +14,7 @@ export interface PaymentResponse {
 
 export interface Props {
   accountId: string;
-  amountXrb: number;
+  amount: number;
   onPaymentSuccess: (data: PaymentResponse) => void;
 }
 
@@ -36,26 +36,39 @@ export class ReblocksButton extends React.Component<Props, State> {
     }
   };
 
+  emptyReblocksDiv = () => {
+    const node = document.getElementById('reblocks');
+
+    while (node && node.hasChildNodes()) {
+      const child = node && node.firstChild;
+      if (child) {
+        node.removeChild(child);
+      }
+    }
+  };
+
   renderBrainblocksButton = () => {
+    this.emptyReblocksDiv();
+
     // tslint:disable-next-line:no-any
     (window as any).brainblocks.Button.render(
       {
         onPayment: this.onPaymentSuccess,
         payment: {
-          amount: this.props.amountXrb,
+          amount: this.props.amount,
           currency: 'rai',
           destination: this.props.accountId
         }
       },
-      '#raiblocks-button'
+      '#reblocks'
     );
   };
 
-  componentDidMount() {
+  componentDidUpdate() {
     this.renderBrainblocksButton();
   }
 
   render() {
-    return <div id="raiblocks-button" />;
+    return <div id="reblocks" />;
   }
 }

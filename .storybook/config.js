@@ -3,6 +3,8 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { setOptions } from '@storybook/addon-options';
 import { addDecorator, configure } from '@storybook/react';
 
+import 'milligram/dist/milligram.css';
+
 // See https://github.com/storybooks/storybook/tree/master/addons/options
 setOptions({
   name: 'Reblocks',
@@ -12,7 +14,7 @@ setOptions({
 addDecorator(withKnobs);
 
 addDecorator(story => {
-  return <div>{story()}</div>;
+  return <div style={{ margin: '10px 80px' }}>{story()}</div>;
 });
 
 const req = require.context('../src', true, /story.tsx$/);
