@@ -5,7 +5,7 @@ export interface PaymentResponse {
 }
 export interface Props {
     accountId: string;
-    amountXrb: number;
+    amount: number;
     onPaymentSuccess: (data: PaymentResponse) => void;
 }
 export interface State {
@@ -14,7 +14,8 @@ export interface State {
 export declare class ReblocksButton extends React.Component<Props, State> {
     constructor(props: Props);
     onPaymentSuccess: (data: PaymentResponse) => void;
+    emptyReblocksDiv: () => void;
     renderBrainblocksButton: () => void;
-    componentDidMount(): void;
+    componentDidUpdate(): void;
     render(): JSX.Element;
 }
