@@ -17,7 +17,7 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "build": "NODE_ENV=production tsc && webpack && ./tools/build/addCustomTypings.sh",
+    "build": "NODE_ENV=production tsc && webpack",
     "build:docs": "npm run build && typedoc --out dist/docs --target es6 --theme minimal src",
     "build:storybook": "build-storybook",
     "clean": "rimraf dist storybook-static",

@@ -13,7 +13,7 @@ var config = {
     umdNamedDefine: true
   },
   resolve: {
-    extensions: ['.ts', '.tsx']
+    extensions: ['.ts', '.tsx', '.js']
   },
   devtool: 'source-map',
   module: {
