@@ -12,6 +12,9 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
+      - run: |
+          git config --global user.email "goldcaddy77@gmail.com"
+          git config --global user.name "Dan Caddigan"
       - run:
           name: dependencies
           command: yarn
