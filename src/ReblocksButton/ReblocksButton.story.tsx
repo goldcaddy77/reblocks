@@ -4,7 +4,7 @@ import * as React from 'react';
 import { PaymentResponse, ReblocksButton } from './ReblocksButton';
 
 const onSuccess = (data: PaymentResponse) => {
-  console.log('Got new token', data.token);
+  console.log('Got transaction token', data.token);
 };
 
 storiesOf('ReblocksButton', module).add('Interactive', () => {
