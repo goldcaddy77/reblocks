@@ -4,7 +4,7 @@
 [![npm version](https://img.shields.io/npm/v/reblocks.svg)](https://www.npmjs.org/package/reblocks)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-This is a React wrapper around the [Brainblocks](https://github.com/brainblocks/brainblocks) payment button that makes
+A React wrapper around the [Brainblocks](https://github.com/brainblocks/brainblocks) payment button that makes
 it simple to start taking Raiblocks payments in React projects.
 
 ## Table of Contents
