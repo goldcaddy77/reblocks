@@ -11,7 +11,7 @@ export interface Props {
 export interface State {
     token: string;
 }
-export declare class ReblocksButton extends React.Component<Props, State> {
+export declare class ReblocksPayment extends React.Component<Props, State> {
     constructor(props: Props);
     onPaymentSuccess: (data: PaymentResponse) => void;
     emptyReblocksDiv: () => void;
