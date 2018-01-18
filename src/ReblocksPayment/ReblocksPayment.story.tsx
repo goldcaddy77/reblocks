@@ -4,7 +4,7 @@ import * as React from 'react';
 // tslint:disable-next-line:no-duplicate-imports
 import { ChangeEvent } from 'react';
 
-import { ACCOUNT_ID, PaymentResponse, ReblocksButton } from '../reblocks';
+import { ACCOUNT_ID, PaymentResponse, ReblocksPayment } from '../reblocks';
 
 interface State {
   accountId: string;
@@ -50,7 +50,7 @@ class PaymentForm extends React.Component<{}, State> {
             placeholder="Amount of rai"
             onChange={this.onChangeAmount}
           />
-          <ReblocksButton
+          <ReblocksPayment
             accountId={this.state.accountId}
             amount={this.state.amount}
             onPaymentSuccess={onSuccess}
@@ -66,14 +66,14 @@ const onSuccess = (data: PaymentResponse) => {
   action(`Transaction ID: ${data.token}`)();
 };
 
-storiesOf('ReblocksButton', module)
+storiesOf('ReblocksPayment', module)
   .add('Small test transaction', () => {
     action('Click the button to start payment')();
 
     return (
       <div>
         <p>The button below will prompt you to send a test transaction of 1000 rai (~2 cents)</p>
-        <ReblocksButton accountId={ACCOUNT_ID} amount={1000} onPaymentSuccess={onSuccess} />
+        <ReblocksPayment accountId={ACCOUNT_ID} amount={1000} onPaymentSuccess={onSuccess} />
       </div>
     );
   })
@@ -87,7 +87,7 @@ storiesOf('ReblocksButton', module)
           If you want to help support the project, you can donate a beer's worth of rai using this
           form
         </p>
-        <ReblocksButton accountId={ACCOUNT_ID} amount={250000} onPaymentSuccess={onSuccess} />
+        <ReblocksPayment accountId={ACCOUNT_ID} amount={250000} onPaymentSuccess={onSuccess} />
         <p style={{ marginTop: 30 }}>
           ...or you can donate a different amount to
           xrb_3ritoyx4zcixshfbezg4aycb49xbupw9ggink1rfm43tm6uh87t4ifuxg5dm

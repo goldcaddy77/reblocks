@@ -1,6 +1,3 @@
-// https://brainblocks.io/api/session/<token>/verify
-// this.verifyToken(data.token);
-
 import * as React from 'react';
 
 // This module is not accessible as `brainblocks` here.  This import is just getting code into
@@ -22,7 +19,7 @@ export interface State {
   token: string;
 }
 
-export class ReblocksButton extends React.Component<Props, State> {
+export class ReblocksPayment extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { token: '' };

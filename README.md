@@ -32,7 +32,7 @@ const onSuccess = (data: PaymentResponse) => {
 };
 
 const Button = (
-  <ReblocksButton
+  <ReblocksPayment
     accountId="xrb_3ritoyx4zcixshfbezg4aycb49xbupw9ggink1rfm43tm6uh87t4ifuxg5dm"
     amount={200000}
     onPaymentSuccess={onSuccess}
@@ -42,9 +42,9 @@ const Button = (
 
 ## API
 
-### ReblocksButton
+### ReblocksPayment
 
-The `ReblocksButton` takes in the following props:
+The `ReblocksPayment` takes in the following props:
 
 - `accountId` {string} account to send funds to
 - `amount` {string} ammount of `rai` to send (Note: 1 rai = 1/1,000,000 XRB)
