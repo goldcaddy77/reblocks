@@ -2,7 +2,7 @@ import * as React from 'react';
 
 // This module is not accessible as `brainblocks` here.  This import is just getting code into
 // package and then we import via windown.brainblocks
-import * as brainblocks from '../../lib/brainblocks';
+import * as brainblocks from '../../../lib/brainblocks';
 
 export interface PaymentResponse {
   token: string;

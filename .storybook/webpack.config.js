@@ -2,7 +2,8 @@ const path = require('path');
 
 const SRC_PATH = path.join(__dirname, '../src');
 const CONFIG_PATH = path.join(__dirname, '../.storybook');
-const CSS_PATH = path.join(__dirname, '../node_modules/milligram/');
+const MILLIGRAM_PATH = path.join(__dirname, '../node_modules/milligram/');
+const REACT_SELECT_PATH = path.join(__dirname, '../node_modules/react-select/');
 
 module.exports = {
   module: {
@@ -20,7 +21,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-        include: [SRC_PATH, CSS_PATH]
+        include: [SRC_PATH, MILLIGRAM_PATH, REACT_SELECT_PATH]
       },
       {
         test: /\.md$/,

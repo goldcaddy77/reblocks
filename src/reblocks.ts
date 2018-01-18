@@ -1,3 +1,4 @@
-export { PaymentResponse, ReblocksPayment } from './ReblocksPayment/ReblocksPayment';
+export { PaymentResponse, ReblocksPayment } from './components/ReblocksPayment/ReblocksPayment';
+export { ReblocksFiatConversion } from './components/ReblocksFiatConversion/ReblocksFiatConversion';
 
-export const ACCOUNT_ID = 'xrb_3ritoyx4zcixshfbezg4aycb49xbupw9ggink1rfm43tm6uh87t4ifuxg5dm';
+export * from './lib';
