@@ -4,7 +4,9 @@ import * as React from 'react';
 // tslint:disable-next-line:no-duplicate-imports
 import { ChangeEvent } from 'react';
 
-import { ACCOUNT_ID, PaymentResponse, ReblocksPayment } from '../reblocks';
+import { ACCOUNT_ID } from '../../lib/';
+
+import { PaymentResponse, ReblocksPayment } from './ReblocksPayment';
 
 interface State {
   accountId: string;
@@ -71,18 +73,22 @@ storiesOf('ReblocksPayment', module)
     action('Click the button to start payment')();
 
     return (
-      <div>
+      <div style={{ margin: '10px 80px' }}>
         <p>The button below will prompt you to send a test transaction of 1000 rai (~2 cents)</p>
         <ReblocksPayment accountId={ACCOUNT_ID} amount={1000} onPaymentSuccess={onSuccess} />
       </div>
     );
   })
   .add('Dynamic Button', () => {
-    return <PaymentForm />;
+    return (
+      <div style={{ margin: '10px 80px' }}>
+        <PaymentForm />
+      </div>
+    );
   })
   .add('Buy Dan a 🍺', () => {
     return (
-      <div>
+      <div style={{ margin: '10px 80px' }}>
         <p>
           If you want to help support the project, you can donate a beer's worth of rai using this
           form

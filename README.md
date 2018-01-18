@@ -27,6 +27,8 @@ yarn add reblocks
 ## Usage
 
 ```tsx
+import { ReblocksPayment } from 'reblocks';
+
 const onSuccess = (data: PaymentResponse) => {
   console.log('Got transaction token', data.token);
 };
@@ -44,11 +46,22 @@ const Button = (
 
 ### ReblocksPayment
 
-The `ReblocksPayment` takes in the following props:
+To initiate a payment, use the `ReblocksPayment` component.  The `ReblocksPayment` takes in the following props:
 
 - `accountId` {string} account to send funds to
 - `amount` {string} ammount of `rai` to send (Note: 1 rai = 1/1,000,000 XRB)
 - `onPaymentSuccess` {function} function to run on successful payment.  This is passed { token: 'TOKEN'}
+
+Link to [demo](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksPayment)
+
+### ReblocksFiatConversion
+
+To display the current value of XRB in a fiat currency, use the `ReblocksFiatConversion` component.  The
+`ReblocksFiatConversion` takes in the following props:
+
+- `currency` {currency} 3 digit fiat currency you want to display the current value of 1 XRB
+
+Link to [demo](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksFiatConversion)
 
 ## Donate
 

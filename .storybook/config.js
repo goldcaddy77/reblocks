@@ -4,6 +4,7 @@ import { setOptions } from '@storybook/addon-options';
 import { addDecorator, configure } from '@storybook/react';
 
 import 'milligram/dist/milligram.css';
+import 'react-select/dist/react-select.css';
 
 // See https://github.com/storybooks/storybook/tree/master/addons/options
 setOptions({
@@ -14,7 +15,7 @@ setOptions({
 addDecorator(withKnobs);
 
 addDecorator(story => {
-  return <div style={{ margin: '10px 80px' }}>{story()}</div>;
+  return <div>{story()}</div>;
 });
 
 const req = require.context('../src', true, /story.tsx$/);
