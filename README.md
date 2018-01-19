@@ -1,4 +1,4 @@
-# Reblocks - Raiblocks Payments with React
+# Reblocks - React RaiBlocks Payments and other Components
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-56b3b4.svg)](https://github.com/prettier/prettier)
 [![npm version](https://img.shields.io/npm/v/reblocks.svg)](https://www.npmjs.org/package/reblocks)
@@ -8,7 +8,7 @@
 A React wrapper around the [Brainblocks](https://github.com/brainblocks/brainblocks) payment button that makes
 it simple to start taking Raiblocks payments in React projects.
 
-Demo: [goldcaddy77.github.io/reblocks](https://goldcaddy77.github.io/reblocks)
+Demo: [goldcaddy77.github.io/reblocks](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksPayment)
 
 ## Table of Contents
 
@@ -42,6 +42,8 @@ const Button = (
 );
 ```
 
+Note: this package is built with TypeScript and already contains the relevant TypeScript type definitions.
+
 ## API
 
 ### ReblocksPayment
@@ -65,11 +67,16 @@ Link to [demo](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksFiat
 
 ## Donate
 
-If you like this project and want to help support future development, test it out by buying me a 🍺:  xrb_3ritoyx4zcixshfbezg4aycb49xbupw9ggink1rfm43tm6uh87t4ifuxg5dm
+If you like this project and want to help support future development, test it out by buying me a 🍺:
+ xrb_3ritoyx4zcixshfbezg4aycb49xbupw9ggink1rfm43tm6uh87t4ifuxg5dm
 
 ## Contribute
 
-PRs accepted.  Note that code uses [prettier](https://github.com/prettier/prettier).
+PRs accepted.  Note that this library uses a bunch of linters/code formatters to keep things consistent:
+
+- [prettier](https://github.com/prettier/prettier) - TypeScript formatting
+- [tslint](https://github.com/palantir/tslint) - TypeScript linting
+- [markdownlint](https://github.com/mivok/markdownlint) - Markdown linting
 
 ## License
 
