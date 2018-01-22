@@ -58,6 +58,7 @@
     "@types/qrcode.react": "^0.6.2",
     "@types/query-string": "^5.0.1",
     "@types/react-select": "^1.1.0",
+    "brainblocks": "^1.0.3",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.6",
     "gh-pages": "^1.1.0",
