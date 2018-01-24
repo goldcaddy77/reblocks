@@ -51,7 +51,7 @@ Note: this package is built with TypeScript and already contains the relevant Ty
 To initiate a payment, use the `ReblocksPayment` component.  The `ReblocksPayment` takes in the following props:
 
 - `accountId` {string} account to send funds to
-- `amount` {string} ammount of `rai` to send (Note: 1 rai = 1/1,000,000 XRB)
+- `amount` {string} ammount of `xrb` to send (Note: 1 xrb = 1/1,000,000 XRB)
 - `onPaymentSuccess` {function} function to run on successful payment.  This is passed { token: 'TOKEN'}
 
 Link to [demo](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksPayment)
@@ -64,6 +64,24 @@ To display the current value of XRB in a fiat currency, use the `ReblocksFiatCon
 - `currency` {currency} 3 digit fiat currency you want to display the current value of 1 XRB
 
 Link to [demo](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksFiatConversion)
+
+### ReblocksQRCode
+
+To create a QR code for payments, use the `ReblocksQRCode` component.  The `ReblocksQRCode` component takes in the
+following props:
+
+- `accountId` {string} account to send funds to
+- `amount` {string - optional} ammount of `xrb` to send (Note: 1 xrb = 1/1,000,000 XRB)
+- `label` {string - optional} see - [RaiBlocks QR Code specification](https://github.com/clemahieu/raiblocks/wiki/URI-and-QR-Code-Standard)
+- `message` {string - optional} see - [RaiBlocks QR Code specification](https://github.com/clemahieu/raiblocks/wiki/URI-and-QR-Code-Standard)
+
+You can also style the QR Code itself using the params we pass into [qrcode.react](https://github.com/zpao/qrcode.react):
+
+- `size` {number - optional} Size
+- `bgColor` {string (CSS color) - optional} Background color
+- `fgColor` {string (CSS color) - optional} Foreground color
+
+Link to [demo](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksQRCode)
 
 ## Donate
 

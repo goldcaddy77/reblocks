@@ -73,7 +73,7 @@ storiesOf('ReblocksPayment', module)
     action('Click the button to start payment')();
 
     return (
-      <div style={{ margin: '10px 80px' }}>
+      <div style={{ margin: '0 60px' }}>
         <p>The button below will prompt you to send a test transaction of 1000 rai (~2 cents)</p>
         <ReblocksPayment accountId={ACCOUNT_ID} amount={1000} onPaymentSuccess={onSuccess} />
       </div>
@@ -81,14 +81,14 @@ storiesOf('ReblocksPayment', module)
   })
   .add('Dynamic Button', () => {
     return (
-      <div style={{ margin: '10px 80px' }}>
+      <div style={{ margin: '0 60px' }}>
         <PaymentForm />
       </div>
     );
   })
   .add('Buy Dan a 🍺', () => {
     return (
-      <div style={{ margin: '10px 80px' }}>
+      <div style={{ margin: '0 60px' }}>
         <p>
           If you want to help support the project, you can donate a beer's worth of rai using this
           form
