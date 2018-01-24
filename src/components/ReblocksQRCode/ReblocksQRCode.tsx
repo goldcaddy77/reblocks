@@ -39,8 +39,8 @@ const ReblocksQRCode: React.StatelessComponent<Props> = (props): JSX.Element => 
   if (showUrl) {
     return (
       <div>
-        {qrComponent}
-        <div>{address}</div>
+        <p>{qrComponent}</p>
+        <p>{address}</p>
       </div>
     );
   }
