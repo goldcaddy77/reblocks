@@ -1,6 +1,6 @@
 // tslint:disable:no-any
 
-declare module '*brainblocks' {
+declare module 'brainblocks' {
   export const buttonTemplate: any;
 
   export const Button: any;
