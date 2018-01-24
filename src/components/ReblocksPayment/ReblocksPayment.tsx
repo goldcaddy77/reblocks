@@ -61,6 +61,10 @@ export class ReblocksPayment extends React.Component<Props, State> {
     this.renderBrainblocksButton();
   }
 
+  componentDidMount() {
+    this.renderBrainblocksButton();
+  }
+
   render() {
     return <div id="reblocks" />;
   }
