@@ -18,5 +18,6 @@ export declare class ReblocksPayment extends React.Component<Props, State> {
     emptyReblocksDiv: () => void;
     renderBrainblocksButton: () => void;
     componentDidUpdate(): void;
+    componentDidMount(): void;
     render(): JSX.Element;
 }
