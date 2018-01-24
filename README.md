@@ -81,6 +81,10 @@ You can also style the QR Code itself using the params we pass into [qrcode.reac
 - `bgColor` {string (CSS color) - optional} Background color
 - `fgColor` {string (CSS color) - optional} Foreground color
 
+<img width="139" alt="QR Code"
+  src="https://user-images.githubusercontent.com/573625/35317572-6b1daaba-00a5-11e8-8605-060983cd3faa.png"
+  style="margin-left: 30px; margin-top: 10px"/>
+
 Link to [demo](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksQRCode)
 
 ## Donate
