@@ -53,7 +53,7 @@ class DynamicCurrencyWrapper extends React.Component<{}, State> {
 storiesOf('ReblocksFiatConversion', module)
   .add('Default (USD)', () => {
     return (
-      <div style={{ padding: '20px' }}>
+      <div>
         <label>Current USD Value</label>
         <span>
           <ReblocksFiatConversion />
@@ -63,7 +63,7 @@ storiesOf('ReblocksFiatConversion', module)
   })
   .add('EUR', () => {
     return (
-      <div style={{ padding: '20px' }}>
+      <div>
         <label>Current EUR Value</label>
         <span>
           <ReblocksFiatConversion currency="EUR" />
@@ -73,7 +73,7 @@ storiesOf('ReblocksFiatConversion', module)
   })
   .add('JPY', () => {
     return (
-      <div style={{ padding: '20px' }}>
+      <div>
         <label>Current JPY Value</label>
         <span>
           <ReblocksFiatConversion currency="JPY" />
@@ -83,7 +83,7 @@ storiesOf('ReblocksFiatConversion', module)
   })
   .add('Choose Currency', () => {
     return (
-      <div style={{ padding: '20px' }}>
+      <div>
         <DynamicCurrencyWrapper />
       </div>
     );

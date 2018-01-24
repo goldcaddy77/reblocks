@@ -49,7 +49,7 @@ export class BeerForm extends React.Component<Props, State> {
 
   render() {
     return (
-      <div style={{ padding: 20 }}>
+      <div>
         <p>
           Current cost of a delicious IPA in Boston: {this.formatUSD(this.BEER_PRICE)}
           <br />

@@ -19,7 +19,7 @@ storiesOf('ReblocksPayment', module)
     action('Click the button to start payment')();
 
     return (
-      <div style={{ padding: 20 }}>
+      <div>
         <p>
           By clicking the button below and making payment to the address, you'll donate 1 XRB to
           this project
@@ -35,16 +35,12 @@ storiesOf('ReblocksPayment', module)
     action('Click the button to start payment')();
 
     return (
-      <div style={{ padding: 20 }}>
+      <div>
         <p>The button below will prompt you to send a test transaction of 1000 rai (~2 cents)</p>
         <ReblocksPayment accountId={ACCOUNT_ID} amount={1000} onPaymentSuccess={onSuccess} />
       </div>
     );
   })
   .add('Dynamic Button', () => {
-    return (
-      <div style={{ padding: 20 }}>
-        <PaymentForm onSuccess={onSuccess} />
-      </div>
-    );
+    return <PaymentForm onSuccess={onSuccess} />;
   });

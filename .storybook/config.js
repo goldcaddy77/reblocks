@@ -15,7 +15,7 @@ setOptions({
 addDecorator(withKnobs);
 
 addDecorator(story => {
-  return <div>{story()}</div>;
+  return <div style={{ padding: '20px' }}>{story()}</div>;
 });
 
 const req = require.context('../src', true, /story.tsx$/);
