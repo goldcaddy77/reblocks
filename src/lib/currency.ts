@@ -136,7 +136,7 @@ export const getCurrencySymbol = (currency?: Currency) => {
 };
 
 export const getCurrentXRBPrice = (currency: Currency) => {
-  return fetch(`${CMC_TICKER_URL}/raiblocks/?convert=${currency}`)
+  return fetch(`${CMC_TICKER_URL}/nano/?convert=${currency}`)
     .then(response => {
       return response.json();
     })

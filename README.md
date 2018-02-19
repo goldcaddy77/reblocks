@@ -1,12 +1,13 @@
-# Reblocks - React RaiBlocks Payments and other Components
+# Reblocks - React Nano Cryptocurrency Payments and other Components
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-56b3b4.svg)](https://github.com/prettier/prettier)
 [![npm version](https://img.shields.io/npm/v/reblocks.svg)](https://www.npmjs.org/package/reblocks)
 [![CircleCI](https://circleci.com/gh/goldcaddy77/reblocks/tree/master.svg?style=shield)](https://circleci.com/gh/goldcaddy77/reblocks/tree/master)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-A React wrapper around the [Brainblocks](https://github.com/brainblocks/brainblocks) payment button that makes
-it simple to start taking Raiblocks payments in React projects.
+Various React components for the [Nano Cryptocurrency](https://nano.org) including a wrapper around the
+[Brainblocks](https://github.com/brainblocks/brainblocks) payment button that makes it simple to start taking Nano
+payments in React projects.
 
 Demo: [goldcaddy77.github.io/reblocks](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksPayment)
 
@@ -72,8 +73,8 @@ following props:
 
 - `accountId` {string} account to send funds to
 - `amount` {string - optional} ammount of `xrb` to send (Note: 1 xrb = 1/1,000,000 XRB)
-- `label` {string - optional} see - [RaiBlocks QR Code specification](https://github.com/clemahieu/raiblocks/wiki/URI-and-QR-Code-Standard)
-- `message` {string - optional} see - [RaiBlocks QR Code specification](https://github.com/clemahieu/raiblocks/wiki/URI-and-QR-Code-Standard)
+- `label` {string - optional} see - [Nano QR Code specification](https://github.com/nanocurrency/raiblocks/wiki/URI-and-QR-Code-Standard)
+- `message` {string - optional} see - [Nano QR Code specification](https://github.com/nanocurrency/raiblocks/wiki/URI-and-QR-Code-Standard)
 
 You can also style the QR Code itself using the params we pass into [qrcode.react](https://github.com/zpao/qrcode.react):
 
@@ -81,9 +82,15 @@ You can also style the QR Code itself using the params we pass into [qrcode.reac
 - `bgColor` {string (CSS color) - optional} Background color
 - `fgColor` {string (CSS color) - optional} Foreground color
 
-<img width="139" alt="QR Code"
-  src="https://user-images.githubusercontent.com/573625/35317572-6b1daaba-00a5-11e8-8605-060983cd3faa.png"
-  style="margin-left: 30px; margin-top: 10px"/>
+<img width="132" alt="Nano Light Blue"
+  style="margin-left: 25px; margin-top: 10px"
+  src="https://user-images.githubusercontent.com/573625/36390123-dd34ee90-156f-11e8-922f-c51bf9e61221.png">
+<img width="132" alt="Nano Dark Blue"
+  style="margin-left: 20px; margin-top: 10px"
+  src="https://user-images.githubusercontent.com/573625/36390124-dd4317d6-156f-11e8-8939-f34620b4f7da.png">
+<img width="132" alt="Nano Orange"
+  style="margin-left: 20px; margin-top: 10px"
+  src="https://user-images.githubusercontent.com/573625/36390125-dd5427e2-156f-11e8-9de0-972347d89a35.png">
 
 Link to [demo](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksQRCode)
 
