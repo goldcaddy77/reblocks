@@ -32,9 +32,16 @@ storiesOf('ReblocksQRCode', module)
       />
     );
   })
-  .add('RaiBlocks Purple', () => {
-    return <ReblocksQRCode accountId={ACCOUNT_ID} fgColor="#8c43d5" />;
+  .add('Nano Light Blue', () => {
+    return <ReblocksQRCode accountId={ACCOUNT_ID} fgColor="#4990e2" />;
   })
+  .add('Nano Dark Blue', () => {
+    return <ReblocksQRCode accountId={ACCOUNT_ID} fgColor="#0e1022" />;
+  })
+  .add('Nano Orange', () => {
+    return <ReblocksQRCode accountId={ACCOUNT_ID} fgColor="#ea8720" />;
+  })
+
   .add('Dynamic QR Code', () => {
     return (
       <div>
@@ -42,7 +49,8 @@ storiesOf('ReblocksQRCode', module)
         <ReblocksQRCode
           accountId={text('Account ID', ACCOUNT_ID)}
           amount={number('Amount', 1000)}
-          fgColor={text('Color', '#8c43d5')}
+          bgColor={text('Background Color', '#ffffff')}
+          fgColor={text('Color', '#4990e2')}
           label={text('Label', 'For a good time')}
           message={text('Message', "I'm a message")}
           showUrl={boolean('Show URL', true)}
