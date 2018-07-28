@@ -11,8 +11,6 @@ export interface Props {
 export interface State {
   currentXRBPrice?: number;
   xrbPerBeer?: number;
-  something?: string;
-  
 }
 
 export class BeerForm extends React.Component<Props, State> {
@@ -20,7 +18,7 @@ export class BeerForm extends React.Component<Props, State> {
 
   constructor(props: Props) {
     super(props);
-    this.state = { currentXRBPrice: undefined, xrbPerBeer: undefined, something: undefined };
+    this.state = { currentXRBPrice: undefined, xrbPerBeer: undefined };
   }
 
   componentDidMount() {
@@ -53,7 +51,6 @@ export class BeerForm extends React.Component<Props, State> {
     return (
       <div>
         <p>
-    
           Current cost of a delicious IPA in Boston: {this.formatUSD(this.BEER_PRICE)}
           <br />
           {this.state.currentXRBPrice && (
