@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import * as React from 'react';
 import { Currency } from '../../lib/currency';
 export interface Props {
