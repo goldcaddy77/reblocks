@@ -57,6 +57,12 @@ export class ReblocksPayment extends React.Component<Props, State> {
     );
   };
 
+  shouldComponentUpdate(nextProps: Readonly<Props>, nextState: Readonly<State>) {
+    return (this.props.accountId !== nextProps.accountId
+      || this.props.amount !== nextProps.amount
+      || this.props.onPaymentSuccess !== nextProps.onPaymentSuccess)
+  }
+
   componentDidUpdate() {
     this.renderBrainblocksButton();
   }
