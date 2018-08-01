@@ -108,6 +108,16 @@ PRs accepted.  Note that this library uses a bunch of linters/code formatters to
 - [tslint](https://github.com/palantir/tslint) - TypeScript linting
 - [markdownlint](https://github.com/mivok/markdownlint) - Markdown linting
 
+To get the project running locally, run `yarn` to install dependencies, and then run:
+
+```typescript
+yarn run storybook
+```
+
+This will build the project and run [storybook](https://github.com/storybooks/storybook) on [localhost:6006](http://localhost:6006/).
+Storybook is also what drives [the demo page](https://goldcaddy77.github.io/reblocks/?selectedKind=ReblocksPayment&selectedStory=Small%20test%20transaction&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Factions%2Factions-panel).
+You can test out your changes by editing the *.story.ts files.  These are what generate the stories on the left navigation.
+
 ## License
 
 MIT © Dan Caddigan
