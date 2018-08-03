@@ -6,6 +6,8 @@ import * as React from 'react';
 import { ACCOUNT_ID } from '../../lib/';
 
 import { BeerForm } from './BeerForm';
+import { CollapseBugTest } from './CollapseBugTest';
+
 import { PaymentForm } from './PaymentForm';
 import { PaymentResponse, ReblocksPayment } from './ReblocksPayment';
 
@@ -43,4 +45,7 @@ storiesOf('ReblocksPayment', module)
   })
   .add('Dynamic Button', () => {
     return <PaymentForm onSuccess={onSuccess} />;
+  })
+  .add('Collapse Bug Test', () => {
+    return <CollapseBugTest onSuccess={onSuccess} />;
   });
