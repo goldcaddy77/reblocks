@@ -17,6 +17,7 @@ export declare class ReblocksPayment extends React.Component<Props, State> {
     onPaymentSuccess: (data: PaymentResponse) => void;
     emptyReblocksDiv: () => void;
     renderBrainblocksButton: () => void;
+    shouldComponentUpdate(nextProps: Readonly<Props>, nextState: Readonly<State>): boolean;
     componentDidUpdate(): void;
     componentDidMount(): void;
     render(): JSX.Element;
